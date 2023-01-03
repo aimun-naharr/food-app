@@ -7,12 +7,13 @@ const HomeKitchen = () => {
      const {data}=useGetPoductQuery()
      console.log(data);
 	return (
-		<div className="mt-[80px] ">
+		<div className="py-[80px] bg-[#F7F8FA]">
 			<div className="border-2 w-[80%] mx-auto mb-[100px]">
 				<Header />
-                    <div>
+                    {/* products container */}
+                    <div className="grid grid-cols-4 w-full border-2 justify-items-between my-[80px]">
                          {
-                              data.map(product=><Product key={product.id} product={product}/>)
+                              data?.map(product=><Product key={product.id} product={product}/>)
                          }
                     </div>
 			</div>
