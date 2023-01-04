@@ -18,7 +18,15 @@ const productApi = apiSlice.injectEndpoints({
 				url: "products",
 			}),
 		}),
+		getOrderedPoducts: builder.query({
+			query: () => ({
+				url: "order",
+				headers:{
+					'x-access-user': 'aimunnaharr@gmail.com'
+				}
+			}),
+		}),
 	}),
 });
 
-export const { usePostProductMutation, useGetPoductQuery } = productApi;
+export const { usePostProductMutation, useGetPoductQuery, useGetOrderedPoductsQuery } = productApi;

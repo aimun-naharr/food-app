@@ -3,44 +3,24 @@ import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { BsBagFill } from "react-icons/bs";
 import CartModal from "../../global/CartModal";
-const menu = [
-     {
-          name: "Home",
-          path: "/",
-     },
-     {
-          name: "About",
-          path: "/about",
-     },
-     {
-          name: "Menu",
-          path: "/menu",
-     },
-     {
-          name: "Blog",
-          path: "/blog",
-     },
-     {
-          name: "Contact",
-          path: "/contact",
-     },
-];
+import NavMenu from "../../global/NavMenu";
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
 	const [isCartOpen, setIsCartOpen]=useState(false)
-     console.log(isCartOpen);
+     const cart=useSelector(state=>state.cart.cart)
 	return (
-		<div className="h-[80px] text-white flex justify-between items-center">
+		<div className="h-[80px] text-white flex justify-between items-center ">
 			<img src="https://i.ibb.co/0Jc4jZ7/image-1.png" alt="logo" />
-			<ul className="flex gap-4">
-				{menu.map((item, i) => (
-					<Link key={i} href={item.path}>
-						<li>{item.name}</li>
-					</Link>
-				))}
-			</ul>
+               {/* navMenu */}
+			<NavMenu/>
 			<div className="flex gap-4">
 				<FiSearch  className="cursor-pointer"/>
-				<BsBagFill  className="cursor-pointer" onClick={()=>setIsCartOpen(true)}/>
+                    <div className="cursor-pointer relative" onClick={()=>setIsCartOpen(true)}>
+                    <BsBagFill   />
+                    <span className="absolute h-4 w-4 bg-[#F3BA00] text-xs p-1 rounded-full top-[-10px] right-[-10px] flex items-center justify-center">{cart.length}</span>
+                    </div>
+				
 			</div>
                {
                     isCartOpen && <CartModal setIsCartOpen={setIsCartOpen}/>

@@ -29,11 +29,14 @@ const Checkout = () => {
 	};
 	const [formData, setFormData] = useState(initialState);
 	console.log(formData);
-	const inputStyles = "w-full border-2 border-[#F3BA00] p-2 outline-none";
+	const inputStyles = "w-full border-2 border-[#F3BA00] p-2 outline-none rounded";
 	const [addProduct, {isLoading, isError, isSuccess, status}] = usePostProductMutation();
 	console.log(status);
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		if(!formData.customer.name && !formData.customer.phone && !formData.customer.address){
+			return
+		}
 		addProduct(formData)
 		setFormData(initialState)
 	};

@@ -34,7 +34,7 @@ const Blog = () => {
 		<section className="">
 			<div className="w-[80%] mx-auto">
                     <h1 className="mb-[20px] font-bold">Our blog</h1>
-                    <section className="flex justify-center gap-14">
+                    <section className="flex justify-between">
                     <div className="flex flex-col gap-4">
                          {
                               blogs.slice(0,2).map((blog, i)=><article className="w-[277px]" key={i}>

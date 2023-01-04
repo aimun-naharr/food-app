@@ -9,9 +9,9 @@ const CartModal = ({ setIsCartOpen }) => {
      const cart=useSelector(state=>state.cart.cart)
      const dispatch=useDispatch()
 	return (
-		<div className="w-full absolute h-screen bg-black/60 left-0 top-0  text-black">
+		<div className="w-full absolute h-screen bg-black/60 left-0 top-0  text-black ">
 			{/* modal */}
-			<div className="z-40 min-w-[400px] bg-white min-h-screen top-0 right-0 absolute py-6  px-8">
+			<div className="z-40 min-w-[400px] bg-white min-h-screen top-0 right-0 absolute py-6  px-8 ">
 				
                     <div className="w-full flex justify-between items-center">
 					<h1 className="text-2xl">Order list ({cart.length})</h1>

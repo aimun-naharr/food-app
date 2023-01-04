@@ -6,6 +6,7 @@ import HomeKitchen from "./components/HomeKitchen.jsx";
 import Blog from "./components/blog/Blog";
 import Navbar from "./components/banner/Navbar";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
 	return (
@@ -14,6 +15,7 @@ export default function Home() {
 				<HomeKitchen />
 				<Blog />
 				<Contact/>
+				<Footer/>
 			</div>
 	);
 }

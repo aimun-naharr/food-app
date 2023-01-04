@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../state/cartSlice";
+import { BiPlusMedical } from "react-icons/bi";
+
+
 const Product = ({ product }) => {
 	const { image, name, price } = product;
 	const dispatch=useDispatch()
@@ -20,7 +23,9 @@ const Product = ({ product }) => {
 						<span className="bg-[#F7F8FA] rounded py-2 px-3">50-70min</span>
 					</div>
 					
-						<button onClick={()=>dispatch(addToCart(product))} className="bg-[#F3BA00] h-[20px] w-[20px] flex items-center justify-center   text-white font-extrabold text-xl  rounded">+</button>
+						<button onClick={()=>dispatch(addToCart(product))} className="bg-[#F3BA00] h-[20px] w-[20px] flex items-center justify-center text-white rounded">
+							<BiPlusMedical className="font-extrabold "/>
+							</button>
 					
 				</div>
 			</div>
