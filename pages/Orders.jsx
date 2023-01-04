@@ -3,7 +3,7 @@ import { useGetOrderedPoductsQuery } from "./state/productSlice";
 
 const Orders = () => {
      const {data}=useGetOrderedPoductsQuery()
-     console.log(data);
+   
 	
 	return (
 		<div className="flex flex-col justify-center items-center h-full w-full ">

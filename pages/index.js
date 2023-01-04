@@ -1,12 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Banner from "./components/banner";
-import HomeKitchen from "./components/HomeKitchen.jsx";
-import Blog from "./components/blog/Blog";
-import Navbar from "./components/banner/Navbar";
+
+import Banner from "./components/banner/Banner";
+import HomeKitchen from "./components/homeKitchen.jsx/HomeKitchen.jsx";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Blog from "./components/blog/Blog";
 
 export default function Home() {
 	return (
