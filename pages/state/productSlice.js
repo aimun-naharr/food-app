@@ -6,8 +6,11 @@ const productApi = apiSlice.injectEndpoints({
 		postProduct: builder.mutation({
 			query: (data) => ({
 				method: "POST",
-				url: "/products/createNew",
+				url: "/order",
 				body: data,
+				headers:{
+					'x-access-user': 'aimunnaharr@gmail.com'
+				}
 			}),
 		}),
 		getPoduct: builder.query({
