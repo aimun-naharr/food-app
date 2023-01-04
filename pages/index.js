@@ -5,6 +5,7 @@ import Banner from './components/banner'
 import HomeKitchen from './components/HomeKitchen.jsx'
 import { Provider } from 'react-redux'
 import { store } from './state/store'
+import Blog from './components/blog'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <div className=''>
     <Banner/>
     <HomeKitchen/>
+    <Blog/>
     </div>
     </Provider>
   )

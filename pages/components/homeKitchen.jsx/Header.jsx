@@ -15,8 +15,8 @@ const Header = () => {
 					</button>
 				))}
 			</div>
-			<div className="w-[20%] mt-[30px] rounded-md border-2 border-gray-300">
-				<input type="text" placeholder="Filters" className="p-2" />
+			<div className="w-[20%] mt-[30px] rounded-md border-2 border-gray-300 bg-[#ffffff]">
+				<input type="text" placeholder="Filters" className="p-2 outline-none" />
 				<select name="Filters" id="" className="border-0 cursor-pointer outline-none"></select>
 			</div>
 		</div>

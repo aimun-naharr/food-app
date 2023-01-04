@@ -3,7 +3,7 @@ import Image from "next/image";
 const Product = ({ product }) => {
 	const { image, name, price } = product;
 	return (
-		<div className="w-[277px] text-[#1B1C21]">
+		<article className="w-[277px] text-[#1B1C21]">
 			<img src={image} alt={name} className="w-[277px] h-[250px] object-cover" />
 			{/* bottom section */}
 			<div className="bg-[#ffffff] p-3">
@@ -21,7 +21,7 @@ const Product = ({ product }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</article>
 	);
 };
 
