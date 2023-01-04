@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
 const Product = ({ product }) => {
 	const { image, name, price } = product;
+	const dispatch=useDispatch()
 	return (
 		<article className="w-[277px] text-[#1B1C21]">
 			<img src={image} alt={name} className="w-[277px] h-[250px] object-cover" />
@@ -16,9 +18,9 @@ const Product = ({ product }) => {
 						<span className="bg-[#F7F8FA] rounded py-2 px-3">★ 4.7</span>
 						<span className="bg-[#F7F8FA] rounded py-2 px-3">50-70min</span>
 					</div>
-					<div className="cursor-pointer   rounded ">
-						<p className="font-bold text-white text-xl bg-[#F3BA00] h-[20px] w-[20px] justify-center flex items-center">+</p>
-					</div>
+					
+						<button onClick={()=>dispatch(addToCart(product))} className="bg-[#F3BA00] h-[20px] w-[20px] flex items-center justify-center   text-white font-extrabold text-xl  rounded">+</button>
+					
 				</div>
 			</div>
 		</article>
@@ -26,3 +28,4 @@ const Product = ({ product }) => {
 };
 
 export default Product;
+
