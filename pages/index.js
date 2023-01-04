@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import Banner from "./components/banner";
 import HomeKitchen from "./components/HomeKitchen.jsx";
 import Blog from "./components/blog/Blog";
+import Navbar from "./components/banner/Navbar";
+import Contact from "./components/Contact";
 
 export default function Home() {
 	return (
@@ -11,6 +13,7 @@ export default function Home() {
 				<Banner />
 				<HomeKitchen />
 				<Blog />
+				<Contact/>
 			</div>
 	);
 }

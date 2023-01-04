@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { usePostProductMutation } from "./state/productSlice";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Checkout = () => {
 	const cart = useSelector((state) => state.cart.cart);
@@ -34,10 +35,15 @@ const Checkout = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		addProduct(formData)
+		setFormData(initialState)
 	};
+	if(status === 'fulfilled'){
+			toast.success('Order has been placed.')
+		}
+	
 	return (
 		<div className="w-[80%] mx-auto  mt-[80px]">
-			<div className="flex gap-8 flex-col w-3/4 items-center justify-center  mx-auto">
+			<div className="flex gap-8 flex-col w-3/4 items-center justify-start  mx-auto">
 				<h1 className="uppercase text-justify text-3xl mb-[10px]">Your order</h1>
 				<div className="grid grid-cols-3 w-full gap-4">
 					<form className="flex flex-col  gap-3 col-span-2">
@@ -86,9 +92,11 @@ const Checkout = () => {
 						<h2 className="flex text-3xl justify-between  pb-2 mb-2 border-b-gray-200">
 							<span>Total:</span> <span>${total}</span>
 						</h2>
+						
 					</div>
 				</div>
 			</div>
+			   <Toaster />
 		</div>
 	);
 };
