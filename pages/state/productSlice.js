@@ -1,4 +1,5 @@
-import apiSlice from "./apiSlice";
+import { apiSlice } from "./apiSlice";
+
 
 
 const productApi = apiSlice.injectEndpoints({
