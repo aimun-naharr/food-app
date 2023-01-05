@@ -6,7 +6,7 @@ import Product from "./Product";
 
 const HomeKitchen = () => {
      const {data}=useGetPoductQuery()
-     console.log(data);
+    
 	return (
 		<div className="pt-[100px]  bg-[#F7F8FA]">
 			<div className=" w-[80%] mx-auto mb-[100px]">
