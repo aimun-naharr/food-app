@@ -7,16 +7,16 @@ import { addToCart } from "../../../state/cartSlice";
 
 
 const Product = ({ product }) => {
-	const { image, name, price } = product;
+	
 	const dispatch=useDispatch()
 	return (
 		<article className="w-[277px] text-[#1B1C21]">
-			<img src={image} alt={name} className="w-[277px] h-[250px] object-cover" />
+			<img src={product?.image} alt={product?.name} className="w-[277px] h-[250px] object-cover" />
 			{/* bottom section */}
 			<div className="bg-[#ffffff] p-3">
 				<div className="flex justify-between mb-[10px] ">
-					<h1 className="font-medium">{name}</h1>
-					<h1 className="font-bold">${price}</h1>
+					<h1 className="font-medium">{product?.name}</h1>
+					<h1 className="font-bold">${product?.price}</h1>
 				</div>
 				<div className="flex justify-between items-center">
 					<div className="text-xs flex gap-2">
