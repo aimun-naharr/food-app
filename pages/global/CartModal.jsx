@@ -3,8 +3,9 @@ import { RxCross2 } from "react-icons/rx";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 import { useDispatch, useSelector } from "react-redux";
-import { decreaseQuantity, increaseQuantity } from "../state/cartSlice";
+
 import Link from "next/link";
+import { decreaseQuantity, increaseQuantity } from "../../state/cartSlice";
 const CartModal = ({ setIsCartOpen }) => {
      const cart=useSelector(state=>state.cart.cart)
      const dispatch=useDispatch()
@@ -28,7 +29,7 @@ const CartModal = ({ setIsCartOpen }) => {
                                              
                                              <p className="text-xs text-gray-400">max quantity: {item.quantity_available}</p>
                                         </div>
-                                        {/* price */}
+                                        {/* price and quantity */}
                                         <div className="flex flex-col items-center gap-2"><p >${item.price * item.quantity}</p>
                                         <div className="flex items-center gap-2"><button className='bg-[#F7F8FA] p-2' onClick={()=>dispatch(decreaseQuantity(item))}><AiOutlineMinus/></button><span>{item.quantity}</span> <button className='bg-[#F7F8FA] p-2' onClick={()=>dispatch(increaseQuantity(item))}><AiOutlinePlus/></button></div></div>
                                         </div>

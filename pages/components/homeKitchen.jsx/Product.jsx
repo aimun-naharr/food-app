@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../state/cartSlice";
+
 import { BiPlusMedical } from "react-icons/bi";
+import { addToCart } from "../../../state/cartSlice";
 
 
 const Product = ({ product }) => {

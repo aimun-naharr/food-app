@@ -1,5 +1,5 @@
 import React from "react";
-import { useGetOrderedPoductsQuery } from "./state/productSlice";
+import { useGetOrderedPoductsQuery } from "../state/productSlice";
 
 const Orders = () => {
      const {data, isLoading}=useGetOrderedPoductsQuery()

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { usePostProductMutation } from "./state/productSlice";
+
 import toast, { Toaster } from 'react-hot-toast';
+import { usePostProductMutation } from "../state/productSlice";
 
 const Checkout = () => {
 	const cart = useSelector((state) => state.cart.cart);
@@ -31,7 +32,7 @@ const Checkout = () => {
 	console.log(formData);
 	const inputStyles = "w-full border-2 border-[#F3BA00] p-2 outline-none rounded";
 	const [addProduct, {isLoading, isError, isSuccess, status}] = usePostProductMutation();
-	console.log(status);
+	
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if(!formData.customer.name && !formData.customer.phone && !formData.customer.address){

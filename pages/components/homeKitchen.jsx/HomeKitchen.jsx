@@ -1,5 +1,6 @@
 import React from "react";
-import { useGetPoductQuery } from "../../state/productSlice";
+import { useGetPoductQuery } from "../../../state/productSlice";
+
 import Header from "./Header";
 import Product from "./Product";
 
