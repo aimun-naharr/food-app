@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
-import toast, { Toaster } from 'react-hot-toast';
 import { usePostProductMutation } from "../state/productSlice";
 
 const Checkout = () => {
@@ -42,7 +41,7 @@ const Checkout = () => {
 		setFormData(initialState)
 	};
 	if(status === 'fulfilled'){
-			toast.success('Order has been placed.')
+			return <p>order has been placed</p>
 		}
 	
 	return (
@@ -100,7 +99,7 @@ const Checkout = () => {
 					</div>
 				</div>
 			</div>
-			   <Toaster />
+			
 		</div>
 	);
 };
