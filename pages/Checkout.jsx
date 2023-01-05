@@ -41,7 +41,7 @@ const Checkout = () => {
 		setFormData(initialState)
 	};
 	if(status === 'fulfilled'){
-			return <div className="w-[80%] flex justify-center items-center mx-auto bg-green-300  h-[200px]">
+			return <div className="w-full flex justify-center items-center mx-auto bg-green-300  h-[200px]">
 <p className="text-green-700 font-bold">Your order has been placed</p>
 			</div>
 		}
