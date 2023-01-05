@@ -2,8 +2,11 @@ import React from "react";
 import { useGetOrderedPoductsQuery } from "./state/productSlice";
 
 const Orders = () => {
-     const {data}=useGetOrderedPoductsQuery()
-   
+     const {data, isLoading}=useGetOrderedPoductsQuery()
+	
+   if(isLoading){
+	return <p>please wait....</p>
+   }
 	
 	return (
 		<div className="flex flex-col justify-center items-center h-full w-full ">
@@ -34,8 +37,8 @@ const Orders = () => {
 						</thead>
 
 						<tbody className="text-sm divide-y divide-gray-100">
-							{data?.map((item) => (
-								<tr key={item.id}>
+							{data?.map((item) => 
+								<tr key={item._id}>
 									<td className="p-2">
 										<input type="checkbox" className="w-5 h-5" value="id-1" />
 									</td>
@@ -53,7 +56,7 @@ const Orders = () => {
 									</td>
 									
 								</tr>
-							))}
+							)}
 						</tbody>
 					</table>
 				</div>
