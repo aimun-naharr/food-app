@@ -31,7 +31,7 @@ const CartModal = ({ setIsCartOpen }) => {
                                         </div>
                                         {/* price and quantity */}
                                         <div className="flex flex-col items-center gap-2"><p >${item.price * item.quantity}</p>
-                                        <div className="flex items-center gap-2"><button className='bg-[#F7F8FA] p-2' onClick={()=>{(item.quantity ===0)? dispatch(decreaseQuantity(item)): dispatch(removeFromCart(item))}}><AiOutlineMinus/></button><span>{item.quantity}</span> <button className='bg-[#F7F8FA] p-2' onClick={()=>dispatch(increaseQuantity(item))}><AiOutlinePlus/></button></div></div>
+                                        <div className="flex items-center gap-2"><button className='bg-[#F7F8FA] p-2' onClick={()=>{(item.quantity <= 1)? dispatch(removeFromCart(item)): dispatch(decreaseQuantity(item))}}><AiOutlineMinus/></button><span>{item.quantity}</span> <button className='bg-[#F7F8FA] p-2' onClick={()=>dispatch(increaseQuantity(item))}><AiOutlinePlus/></button></div></div>
                                         </div>
                                         
                                    </div>)
