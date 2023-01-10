@@ -8,12 +8,12 @@ const HomeKitchen = () => {
      const {data}=useGetPoductQuery()
     
 	return (
-		<div className="pt-[100px]  bg-[#F7F8FA]">
-			<div className=" w-[80%] mx-auto mb-[100px]">
+		<div className="pt-[100px]  bg-[#F7F8FA] ">
+			<div className="w-full md:w-[80%] mx-auto mb-[100px]">
 				<Header />
                     {/* products container */}
                     <div className="grid  w-full  justify-center items-center my-[80px]">
-                        <div className="grid grid-cols-4 justify-between items-baseline gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-4 justify-between items-baseline gap-8">
                         {
                               data?.slice(0, 4).map(product=><Product key={product?.id} product={product}/>)
                          }

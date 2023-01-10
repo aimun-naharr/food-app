@@ -32,12 +32,12 @@ const Blog = () => {
 	
 	return (
 		<section className="">
-			<div className="w-[80%] mx-auto">
+			<div className="w-full md:w-[80%] mx-auto px-4">
                     <h1 className="mb-[20px] font-bold">Our blog</h1>
-                    <section className="flex justify-between">
+			<section className="flex gap-3 md:gap-0 md:flex-row flex-col md:items-start items-center md:justify-between ">
                     <div className="flex flex-col gap-4">
                          {
-                              blogs.slice(0,2).map((blog, i)=><article className="w-[277px]" key={i}>
+                              blogs.slice(0,2).map((blog, i)=><article className="max-w-[277px]" key={i}>
                                    <img src={blog.image} alt={blog.heading} />
 							<div className="p-2">
 								<h1 className="font-medium">{blog.heading}</h1>
@@ -49,7 +49,7 @@ const Blog = () => {
 				<div>
 					{
 						blogs.slice(2, 3).map((blog, i)=>
-							<article className="flex-1 w-[546px]" key={i}>
+							<article className="flex-1 max-w-[546px]" key={i}>
                                    <img src={blog.image} alt={blog.heading}  className='w-full'/>
 							<div className="p-2">
 								<h1 className="font-medium">{blog.heading}</h1>
@@ -63,7 +63,7 @@ const Blog = () => {
 				<div>
 					{
 						blogs.slice(3, 5).map((blog, i)=>
-							<article className="w-[277px]" key={i}>
+							<article className="max-w-[277px]" key={i}>
                                    <img src={blog.image} alt={blog.heading}  className=''/>
 							<div className="p-2">
 								<h1 className="font-medium">{blog.heading}</h1>

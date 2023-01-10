@@ -3,8 +3,8 @@ import React from "react";
 const Contact = () => {
 	const inputStyles = "outline-none border-none rounded  h-14 w-full px-3 placeholder:text-start";
 	return (
-		<section className="mt-[80px] bg-[#F7F8FA] py-20">
-			<div className="w-[80%] mx-auto flex gap-8  justify-between">
+		<section className="mt-[80px] bg-[#F7F8FA] py-20 px-4">
+			<div className="w-full md:w-[80%] mx-auto flex md:flex-row flex-col gap-8  justify-between ">
 				{/* left side */}
 				<div>
 					{/* heading */}
@@ -26,7 +26,7 @@ const Contact = () => {
 					</div>
 				</div>
 				{/* right image */}
-				<div className="w-[503px] ">
+				<div className="max-w-[503px] ">
 					<img src="https://i.ibb.co/QnD96Cm/Food-delivery-cute-man-riding-motorcycles-cartoon-art-illustration-2.png" alt="deliveryBoy" />
 				</div>
 			</div>

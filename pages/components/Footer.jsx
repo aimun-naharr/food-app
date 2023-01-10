@@ -6,8 +6,8 @@ import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
 	return (
 		<div className="bg-[#1AC073] mt-[40px] text-white py-10">
-			<div className="w-[80%] mx-auto">
-				<div className="flex justify-between items-center mb-4">
+			<div className="md:w-[80%] w-full mx-auto">
+				<div className="flex justify-between md:flex-row flex-col items-center mb-4">
 					<h1 className="font-serif uppercase text-3xl">What2eat</h1>
 					<NavMenu />
 					<div className="flex gap-2">
