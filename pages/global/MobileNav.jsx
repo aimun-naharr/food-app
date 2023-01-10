@@ -39,7 +39,7 @@ const MobileNav = () => {
              
           {menu.map((item, i) => (
                <Link key={i} href={item.path} className='flex flex-col items-center active:bg-gray-500 p-3 rounded-full'>
-               <item.icon className='text-[#F3BA00]/50 '/>
+               <item.icon className='text-[#F3BA00] '/>
                     <li className='text-gray-500'>{item.name}
                     </li>
                </Link>

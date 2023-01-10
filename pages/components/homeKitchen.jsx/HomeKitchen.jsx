@@ -9,7 +9,7 @@ const HomeKitchen = () => {
     
 	return (
 		<div className="pt-[100px]  bg-[#F7F8FA] ">
-			<div className="w-full md:w-[80%] mx-auto mb-[100px]">
+			<div className="w-full md:w-[80%] mx-auto mb-[100px] px-3 md:px-0">
 				<Header />
                     {/* products container */}
                     <div className="grid  w-full  justify-center items-center my-[80px]">
