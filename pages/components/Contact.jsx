@@ -3,8 +3,8 @@ import React from "react";
 const Contact = () => {
 	const inputStyles = "outline-none border-none rounded  h-14 w-full px-3 placeholder:text-start";
 	return (
-		<section className="mt-[80px] bg-[#F7F8FA] py-20 px-4">
-			<div className="w-full md:w-[80%] mx-auto flex md:flex-row flex-col gap-8  justify-between ">
+		<section className="mt-[80px] bg-[#F7F8FA] py-20 px-4 pb-[90px] md:pb-0">
+			<div className="w-full md:w-[80%] mx-auto flex md:flex-row  gap-8  justify-between flex-col-reverse">
 				{/* left side */}
 				<div>
 					{/* heading */}

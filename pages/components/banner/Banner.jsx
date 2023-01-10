@@ -5,8 +5,8 @@ const Banner = () => {
 	return (
 		<main className="bg-[#0C1712] min-h-[800px] w-full">
 			{/* banner wrapper */}
-			<div className="w-full md:w-[80%] mx-auto">
-				{/* <Navbar/> */}
+			<div className="w-full md:w-[80%] mx-auto ">
+				<Navbar/>
 				<div className="text-white">
 					{/* banner text */}
 					<div className="max-w-[534px] mt-[200px] px-4">

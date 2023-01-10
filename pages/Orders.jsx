@@ -1,5 +1,6 @@
 import React from "react";
 import { useGetOrderedPoductsQuery } from "../state/productSlice";
+import MobileNav from "./global/MobileNav";
 
 const Orders = () => {
      const {data, isLoading}=useGetOrderedPoductsQuery()
@@ -9,7 +10,8 @@ const Orders = () => {
    }
 	
 	return (
-		<div className="flex flex-col justify-center items-center h-full w-full ">
+		<div className="flex flex-col justify-center items-center h-full w-full relative">
+			<MobileNav/>
 			<div className="w-full max-w-7xl mx-auto rounded-lg  bg-white shadow-lg border border-gray-200">
 				<header className="px-5 py-4 border-b border-gray-100">
 					<div className="font-semibold text-gray-800">Orders</div>

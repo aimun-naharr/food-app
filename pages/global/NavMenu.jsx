@@ -24,7 +24,7 @@ const menu = [
 ];
 const NavMenu = () => {
      return (
-          <ul className="flex gap-4">
+          <ul className="md:flex md:flex-row gap-4 hidden ">
 				{menu.map((item, i) => (
 					<Link key={i} href={item.path}>
 						<li>{item.name}</li>

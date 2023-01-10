@@ -10,7 +10,7 @@ const Navbar = () => {
 	const [isCartOpen, setIsCartOpen]=useState(false)
      const cart=useSelector(state=>state.cart.cart)
 	return (
-		<div className="h-[80px] text-white flex justify-between items-center ">
+		<div className="h-[80px] text-white flex justify-between items-center  w-full px-3 md:px-0">
 			<img src="https://i.ibb.co/0Jc4jZ7/image-1.png" alt="logo" />
                {/* navMenu */}
 			<NavMenu/>
