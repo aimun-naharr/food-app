@@ -1,9 +1,9 @@
 ## Features
-+ Add items to cart
-+ Increase and decrease the quantity of items
++ implemented add and remove feature in cart
++ implemented Increase and decrease  button in cart
 + Calculation 
 + In the checkout page you can post your order
-+ Mobile response
++ Mobile responsive
 
 ## Chanllenges
 + The only challange was to managing the states which I've overcome with redux-toolkit
